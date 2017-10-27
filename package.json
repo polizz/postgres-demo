@@ -1,0 +1,31 @@
+{
+  "name": "postgres-demo",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Andrew Pauluhn",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node dist",
+    "prebuild": "npm run clean && mkdir dist && cp -R src/sql dist/sql",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "watch": "npm run build -- -w"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.2",
+    "@types/lodash": "^4.14.80",
+    "@types/node": "^8.0.47",
+    "@types/pg": "^7.1.5",
+    "@types/superagent": "^3.5.6",
+    "tslint": "^5.8.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.153.0",
+    "dotenv": "^4.0.0",
+    "lodash": "^4.17.4",
+    "pg": "^7.3.0",
+    "superagent": "^3.8.1"
+  }
+}
